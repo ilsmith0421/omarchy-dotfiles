@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+if [[ $# -ne 1 || ! "$1" =~ ^[a-zA-Z0-9_.-]+$ || "$1" == . || "$1" == .. ]]; then
+  echo 'Usage: project-open NameWithoutSpaces' >&2; exit 2
+fi
+folder="$HOME/Projects/$1"
+mkdir -p "$folder"
+if command -v code >/dev/null; then code "$folder"; else printf 'Created %s; install VS Code to launch it\n' "$folder"; fi
