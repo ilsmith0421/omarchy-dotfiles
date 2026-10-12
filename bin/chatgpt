@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+exec xdg-open 'https://chatgpt.com/'
