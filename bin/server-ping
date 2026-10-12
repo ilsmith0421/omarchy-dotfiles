@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+if [[ -z "${GOODCIRCLE_SERVER_HOST:-}" ]]; then
+  echo 'Set GOODCIRCLE_SERVER_HOST locally to your server IP or hostname first.' >&2
+  exit 1
+fi
+exec ping -c 3 "$GOODCIRCLE_SERVER_HOST"
