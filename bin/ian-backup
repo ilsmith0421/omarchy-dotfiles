@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+out="$HOME/Backups/omarchy-preferences-$(date +%Y%m%d-%H%M%S).tar.gz"
+mkdir -p "$HOME/Backups"
+paths=()
+for f in .config/hypr/hyprland.conf .bashrc .zshrc .gitconfig .config/Code/User/settings.json; do
+  [[ -e "$HOME/$f" ]] && paths+=("$f")
+done
+if (("${#paths[@]}" )); then
+  tar -czf "$out" -C "$HOME" "${paths[@]}"
+  echo "Created $out"
+else
+  echo 'No recognized preferences found'
+fi
+echo 'Personal files, SSH keys, tokens and game saves are NOT included.'
