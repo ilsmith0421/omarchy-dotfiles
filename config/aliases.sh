@@ -1,0 +1,11 @@
+# Safe shortcuts. No passwords, keys, hostnames or tokens here.
+alias projects='cd "$HOME/Projects"'
+alias goodcircledev='cd "$HOME/Projects/GoodCircle"'
+alias emb='cd "$HOME/Projects/Embedded"'
+alias school='cd "$HOME/Projects/School"'
+alias unityprojects='cd "$HOME/Projects/Unity"'
+alias mediafiles='cd "$HOME/Projects/Media"'
+alias gs='git status --short'
+alias gl='git log --oneline -10'
+alias updatepc='omarchy update'
+alias goodcircle='ssh goodcircle'
