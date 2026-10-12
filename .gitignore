@@ -1,0 +1,21 @@
+# Keep credentials and local state out of this public repository
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+*.p12
+*.pfx
+*.secret
+secrets/
+credentials/
+.ssh/
+backups/
+*.bak
+*.backup
+*.swp
+*.log
+.DS_Store
+.vscode/
