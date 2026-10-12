@@ -8,6 +8,7 @@ for f in "$ROOT"/bin/*; do
   dest="$HOME/.local/bin/$(basename "$f")"
   [[ -L "$dest" && "$(readlink "$dest")" == "$f" ]] && continue
   if [[ -e "$dest" || -L "$dest" ]]; then mv "$dest" "$BACKUP/$(basename "$f")"; fi
+  chmod +x "$f"
   ln -s "$f" "$dest"
 done
 for shellfile in "$HOME/.bashrc" "$HOME/.zshrc"; do
