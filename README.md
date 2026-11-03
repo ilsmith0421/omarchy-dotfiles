@@ -1,3 +1,7 @@
+> **Archived:** this repository has been consolidated into
+> [ilsmith0421/dotfiles](https://github.com/ilsmith0421/dotfiles), which includes
+> these scripts plus the full Hyprland, Omarchy bar, Neovim, and Dolphin configs.
+
 # Omarchy Dotfiles
 
 Personal Omarchy workstation setup for **VS Code, Zen Browser, ChatGPT, Steam, Discord, Blender, Unity Hub, Moonlight, Tailscale**, development, media, and server access.
