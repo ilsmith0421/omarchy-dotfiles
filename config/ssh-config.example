@@ -1,6 +1,6 @@
 # Copy into ~/.ssh/config and replace both placeholders.
 # Never commit your actual SSH config or private keys.
-Host goodcircle
+Host appserver
     HostName YOUR_SERVER_ADDRESS
     User YOUR_SERVER_USER
     IdentitiesOnly yes

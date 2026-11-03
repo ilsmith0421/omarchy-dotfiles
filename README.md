@@ -1,6 +1,6 @@
 # Omarchy Dotfiles
 
-Personal Omarchy workstation setup for **VS Code, Zen Browser, ChatGPT, Steam, Discord, Blender, Unity Hub**, development, media, and server access.
+Personal Omarchy workstation setup for **VS Code, Zen Browser, ChatGPT, Steam, Discord, Blender, Unity Hub, Moonlight, Tailscale**, development, media, and server access.
 
 This repository is **public**. No passwords, API keys, SSH private keys, usernames for servers, or real private host addresses belong in it. Keep those in your own machine's private configuration files.
 
@@ -22,7 +22,7 @@ Open a new terminal to activate aliases. Keep the cloned folder in place since l
 
 `install.sh` creates project folders, safely backs up replaced launchers or shell configuration, and links the commands in `bin/` into `~/.local/bin`. It does **not** run sudo, install packages, configure a network service, or change your bootloader.
 
-`apps.sh` presents **optional** packages. Use Omarchy's built-in installer for Steam and Zen. Unity Hub installation follows the official Linux guidance and may require extra work because Arch is not an officially supported Unity distribution. Fusion 360 is intentionally excluded.
+`apps.sh` presents **optional** packages. Use Omarchy's built-in installer for Steam and Zen. Unity Hub installs from the AUR when `yay` is available; Arch is not an officially supported Unity distribution, so the official AppImage remains a fallback. Tailscale installs the client only — enable and sign in yourself with `sudo systemctl enable --now tailscaled && sudo tailscale up`. Moonlight installs as `moonlight-qt` for game streaming. Fusion 360 is intentionally excluded.
 
 ## Shortcuts
 
@@ -32,7 +32,7 @@ Open a new terminal to activate aliases. Keep the cloned folder in place since l
 * `gs`, `gl`: short Git status and recent commit log
 * `updatepc`: Omarchy update
 * `ian-backup`: archive selected desktop preferences only
-* `goodcircle`: SSH using a local SSH alias you configure
+* `appserver`: SSH using a local SSH alias you configure
 * `server-ping`: ping the hostname in your local `GOODCIRCLE_SERVER_HOST` setting
 
 To configure server access, copy the sample in `config/ssh-config.example` to your private `~/.ssh/config` and replace placeholders. Use `chmod 600 ~/.ssh/config`. Never publish the filled-in file. Set `GOODCIRCLE_SERVER_HOST` in your own shell environment, not in this repository.
